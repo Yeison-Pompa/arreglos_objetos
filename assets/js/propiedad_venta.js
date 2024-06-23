@@ -46,7 +46,7 @@ const propiedades_venta = [
     costo: 750000,
     smoke: true,
     pets: false,
-  },
+  }
 ];
 
 
@@ -56,6 +56,7 @@ let html = ""
 
 for (const propiedad of propiedades_venta) {
   html += `
+ 
   <div class="col-md-4 mb-4">
             <div class="card">
               <img
@@ -88,6 +89,10 @@ for (const propiedad of propiedades_venta) {
                 </p>
               </div>
             </div>
+          </div>
+     
   `
 
 }
+
+section.innerHTML = html
