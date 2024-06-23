@@ -2,7 +2,7 @@ const propiedades_venta = [
   {
     id:1,
     nombre: "Exclusive Surco",
-    src: "",
+    src: "assets/img/dpto1.jpg",
     descripcion: "Lanzamiento Looo And Feel 2, un proyecto arquitectonico audaz e imponente",
     ubicacion: "Av. Encalada 1344. Surco",
     habitaciones: 3,
@@ -15,7 +15,7 @@ const propiedades_venta = [
   {
     id:2,
     nombre: "Salaverry 571",
-    src: "",
+    src: "assets/img/dpto2.jpg",
     descripcion: "Lanzamiento Looo And Feel 2, un proyecto arquitectonico audaz e imponente",
     ubicacion: "Avenida General Felipe Salaverry 571",
     habitaciones: 2,
@@ -26,7 +26,7 @@ const propiedades_venta = [
   {
     id:3,
     nombre: "Aster Basadre",
-    src: "",
+    src: "assets/img/dpto3.jpg",
     descripcion: "Lanzamiento Looo And Feel 2, un proyecto arquitectonico audaz e imponente",
     ubicacion: "Avenida Cesar Vallejo 320",
     habitaciones: 3,
@@ -39,7 +39,7 @@ const propiedades_venta = [
 
     id:4,
     nombre: "Benavides Deluxe",
-    src: "",
+    src: "assets/img/dpto4.jpg",
     descripcion: "Lanzamiento Looo And Feel 2, un proyecto arquitectonico audaz e imponente",
     ubicacion: "Av. 28 de julio 1365 miraflores",
     habitaciones: 4,
@@ -55,12 +55,18 @@ const section = document.querySelector("#section-hero")
 let html = ""
 
 for (const propiedad of propiedades_venta) {
+  let permitirFumar = propiedad.smoke ? `<i class="fas fa-smoking"></i> Permitido fumar` : `<i class="fas fa-smoking-ban"></i>No se permite fumar`;
+  let permitirMascotas = propiedad.pets ? `<i class="fas fa-paw"></i> Mascotas permitidas` : `<i class="fa-solid fa-ban"></i> No se permiten mascotas`;
+  let colorFumar = propiedad.smoke ? "text-success" : "text-danger";
+  let colorMascotas = propiedad.pets ? "text-success" : "text-danger";
+
+
   html += `
  
   <div class="col-md-4 mb-4">
             <div class="card">
               <img
-                src="https://fotos.perfil.com/2018/09/21/trim/950/534/nueva-york-09212018-366965.jpg"
+                src="${propiedad.src}"
                 class="card-img-top"
                 alt="Imagen del departamento"
               />
@@ -81,11 +87,11 @@ for (const propiedad of propiedades_venta) {
                   <i class="fas fa-bath"></i> 4 Baños
                 </p>
                 <p><i class="fas fa-dollar-sign"></i>${propiedad.costo} </p>
-                <p class="text-danger">
-                  <i class="fas fa-smoking-ban"></i> ${propiedad.smoke}
+                <p class="${colorFumar}">
+                   ${permitirFumar}
                 </p>
-                <p class="text-danger">
-                  <i class="fa-solid fa-ban"></i> ${propiedad.pets}
+                <p class="${colorMascotas}">
+                  <i class="fa-solid fa-ban"></i> ${permitirMascotas}
                 </p>
               </div>
             </div>
