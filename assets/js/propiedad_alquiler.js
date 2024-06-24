@@ -6,6 +6,7 @@ const propiedades_alquiler = [
       descripcion: "Este apartamento combina elegancia contemporánea con comodidades modernas.",
       ubicacion: "Av. 28 de Julio 873 Miraflores",
       habitaciones: 3,
+      baño: 2,
       costo: 319919,
       smoke: true,
       pets: false,
@@ -19,6 +20,7 @@ const propiedades_alquiler = [
       descripcion: "Este apartamento combina elegancia contemporánea con comodidades modernas.",
       ubicacion: "Av. alcanfores 271 Barranco ",
       habitaciones: 5,
+      baño:4,
       costo: 366000,
       smoke: false,
       pets: false,
@@ -30,6 +32,7 @@ const propiedades_alquiler = [
       descripcion: "Este apartamento combina elegancia contemporánea con comodidades modernas.",
       ubicacion: "Av. Los bosques 250 La Molina",
       habitaciones: 4,
+      baño:3,
       costo: 219600,
       smoke: true,
       pets: true,
@@ -42,6 +45,7 @@ const propiedades_alquiler = [
         descripcion: "Este apartamento combina elegancia contemporánea con comodidades modernas.",
         ubicacion: "Rio colorado 23 Surco",
         habitaciones: 3,
+        baño:2,
         costo: 219600,
         smoke: false,
         pets: true,
@@ -85,7 +89,7 @@ const propiedades_alquiler = [
                   </p>
                   <p>
                     <i class="fas fa-bed"></i> ${propiedad.habitaciones} |
-                    <i class="fas fa-bath"></i> 4 Baños
+                    <i class="fas fa-bath"></i> ${propiedad.baño}
                   </p>
                   <p><i class="fas fa-dollar-sign"></i>${propiedad.costo} </p>
                   <p class="${iconoFumar}">
