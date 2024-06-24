@@ -1,4 +1,4 @@
-const propiedades_alquiler = [
+const propiedades_venta = [
     {
       id:1,
       nombre: "Exclusive Surco",
@@ -34,18 +34,6 @@ const propiedades_alquiler = [
       smoke: false,
       pets: true,
     },
-
-    {
-        id:3,
-        nombre: "Aster Basadre",
-        src: "assets/img/dpto3.jpg",
-        descripcion: "Lanzamiento Looo And Feel 2, un proyecto arquitectonico audaz e imponente",
-        ubicacion: "Avenida Cesar Vallejo 320",
-        habitaciones: 3,
-        costo: 219600,
-        smoke: false,
-        pets: true,
-      },
   
     
   ];
@@ -55,7 +43,7 @@ const propiedades_alquiler = [
   
   let html = ""
   
-  for (const propiedad of propiedades_alquiler) {
+  for (const propiedad of propiedades_venta) {
     let fumar = propiedad.smoke ? `<i class="fas fa-smoking"></i> Permitido fumar` : `<i class="fas fa-smoking-ban"></i>No se permite fumar`;
     let mascotas = propiedad.pets ? `<i class="fas fa-paw"></i> Mascotas permitidas` : `<i class="fa-solid fa-ban"></i> No se permiten mascotas`;
     let iconoFumar = propiedad.smoke ? "text-success" : "text-danger";
@@ -105,3 +93,7 @@ const propiedades_alquiler = [
   }
   
   section.innerHTML = html
+
+
+
+  

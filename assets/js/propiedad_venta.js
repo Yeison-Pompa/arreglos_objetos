@@ -34,19 +34,19 @@ const propiedades_venta = [
     smoke: false,
     pets: true,
   },
-
   {
-
-    id:4,
-    nombre: "Benavides Deluxe",
-    src: "assets/img/dpto4.jpg",
+    id:3,
+    nombre: "Aster Basadre",
+    src: "assets/img/dpto3.jpg",
     descripcion: "Lanzamiento Looo And Feel 2, un proyecto arquitectonico audaz e imponente",
-    ubicacion: "Av. 28 de julio 1365 miraflores",
-    habitaciones: 4,
-    costo: 750000,
-    smoke: true,
-    pets: false,
+    ubicacion: "Avenida Cesar Vallejo 320",
+    habitaciones: 3,
+    costo: 219600,
+    smoke: false,
+    pets: true,
   }
+
+  
 ];
 
 
@@ -55,10 +55,10 @@ const section = document.querySelector("#section-hero")
 let html = ""
 
 for (const propiedad of propiedades_venta) {
-  let permitirFumar = propiedad.smoke ? `<i class="fas fa-smoking"></i> Permitido fumar` : `<i class="fas fa-smoking-ban"></i>No se permite fumar`;
-  let permitirMascotas = propiedad.pets ? `<i class="fas fa-paw"></i> Mascotas permitidas` : `<i class="fa-solid fa-ban"></i> No se permiten mascotas`;
-  let colorFumar = propiedad.smoke ? "text-success" : "text-danger";
-  let colorMascotas = propiedad.pets ? "text-success" : "text-danger";
+  let fumar = propiedad.smoke ? `<i class="fas fa-smoking"></i> Permitido fumar` : `<i class="fas fa-smoking-ban"></i>No se permite fumar`;
+  let mascotas = propiedad.pets ? `<i class="fas fa-paw"></i> Mascotas permitidas` : `<i class="fa-solid fa-ban"></i> No se permiten mascotas`;
+  let iconoFumar = propiedad.smoke ? "text-success" : "text-danger";
+  let iconoMascotas = propiedad.pets ? "text-success" : "text-danger";
 
 
   html += `
@@ -87,11 +87,13 @@ for (const propiedad of propiedades_venta) {
                   <i class="fas fa-bath"></i> 4 Baños
                 </p>
                 <p><i class="fas fa-dollar-sign"></i>${propiedad.costo} </p>
-                <p class="${colorFumar}">
-                   ${permitirFumar}
+                <p class="${iconoFumar}">
+              
+                   ${fumar}
                 </p>
-                <p class="${colorMascotas}">
-                  <i class="fa-solid fa-ban"></i> ${permitirMascotas}
+                <p class="${iconoMascotas}">
+                
+                  ${mascotas}
                 </p>
               </div>
             </div>
